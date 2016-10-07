@@ -24,6 +24,22 @@ namespace Leetcode.Tests
             Assert.AreEqual(4, res);
         }
 
+        [TestMethod]
+        public void DivideEvenNumber2()
+        {
+            DivideTwoIntegersManager dtim = new DivideTwoIntegersManager();
+            var res = dtim.Divide(972, 5);
+            Assert.AreEqual(194, res);
+        }
+
+        [TestMethod]
+        public void DivideEvenMinusNumber2()
+        {
+            DivideTwoIntegersManager dtim = new DivideTwoIntegersManager();
+            var res = dtim.Divide(-972, 5);
+            Assert.AreEqual(-194, res);
+        }
+
 
         [TestMethod]
         public void DivideWithRestNumber()

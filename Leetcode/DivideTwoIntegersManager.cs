@@ -8,8 +8,44 @@ namespace Leetcode
 {
     public class DivideTwoIntegersManager
     {
+        private int BinaryDivide(int dividend, int divisor)
+        {
+
+            int denom = divisor;
+            int current = 1;
+            int answer = 0;
+
+            if (denom > dividend)
+                return 0;
+
+            if (denom == dividend)
+                return 1;
+
+            while (denom <= dividend)
+            {
+                denom <<= 1;
+                current <<= 1;
+            }
+
+            denom >>= 1;
+            current >>= 1;
+
+            while (current != 0)
+            {
+                if (dividend >= denom)
+                {
+                    dividend -= denom;
+                    answer |= current;
+                }
+                current >>= 1;
+                denom >>= 1;
+            }
+            return answer;
+        }
+
         public int Divide(int dividend, int divisor)
         {
+            
             
             if (divisor == 0)
             {
@@ -40,6 +76,8 @@ namespace Leetcode
             {
                 return 0;
             }
+
+           // return this.BinaryDivide(dividend, divisor);
 
             return this.Execute(dividend, divisor);
         }

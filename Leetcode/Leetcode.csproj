@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DivideTwoIntegersManagerOld.cs" />
     <Compile Include="DivideTwoIntegersManager.cs" />
+    <Compile Include="IsNumberManager.cs" />
     <Compile Include="ThreeSumManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
